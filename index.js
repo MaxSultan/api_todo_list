@@ -1,7 +1,9 @@
 let state = {
     list: [],
     original: [],
-    date: d = new Date()
+    date: d = new Date(),
+    check: 'fa fa-check-circle',
+    unchecked: 'fa fa-circle-o'
 };
 
 function showDate(){
@@ -10,22 +12,31 @@ function showDate(){
 };
 
 function showTodo(item){
+
+    let iconClass = ''
+    if (item.completed){
+        iconClass ='fa fa-check-circle'
+    }else {
+        iconClass ='fa fa-circle-o'
+    };
         return `
         <div id='card' class='${item.completed}' onclick='toggleComplete(this)'>
-            <strong id='num'>${item.id}</strong>   ${item.title}
-            <i class="fa fa-circle-thin "></i>
+        <i class='${iconClass}'></i>
+            <strong id='num'>${item.id}</strong>   
+            ${item.title}
         </div>
         `  
 };
 
 function toggleComplete(item){
-   console.log(item.children[0])
    if (item.className === 'false'){
        item.className = 'true';
+       item.childNodes[1].className = state.check;
    } else {
-       item.className = 'false'
+        item.className = 'false';
+        item.childNodes[1].className = state.unchecked;
    }
-}
+};
 
 function showTodos(){
     const { list } = state;
