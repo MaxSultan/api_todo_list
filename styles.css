@@ -1,3 +1,53 @@
 body{
     text-align:center;
+    font-family: 'Titillium Web';
+}
+
+#container{
+    padding: 10px;
+    width: 1140px;
+    margin: 0 auto;
+}
+
+#header{
+    width: 1140px;
+    height: 200px;
+    background-image: url('https://i.kinja-img.com/gawker-media/image/upload/s--w6_NBh1u--/c_scale,fl_progressive,q_80,w_800/a7mkztuea7i5tujmvhp4.jpg');
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+    border-radius: 45px 45px 0 0;
+    position: relative;
+}
+
+#date{
+    display:block;
+}
+
+button{
+    margin-bottom: 40px;
+}
+
+#main{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1px;
+}
+
+#num{
+    font-size: 22px;
+    text-decoration: none;
+}
+
+#card{
+    box-shadow: 2px 2px 2px #555;
+}
+
+.true{
+    text-decoration: line-through;
+    background-color: rgba(34,139,34,0.1)
+}
+
+.false{
+    text-decoration: none;
+    background-color: rgba(255,0,0,0.1);
 }

@@ -3,12 +3,23 @@
         <link rel= 'stylesheet' href="styles.css">
         <title>Todo list</title>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body>
-        <h1>Todo-list</h1>
-        <span id="date"></span>
-        <div id="main"></div></div>
+        <div id='container'>
+            <div id='header'>
+                <h1>Todo-list</h1>
+                <span id="date"></span>
+                <button id="getTodos" onclick="getTodos()">Get Todos</button>
+                <button onclick="filterComplete()">Show Complete</button>
+                <button onclick="filterIncomplete()">Show Incompleted</button>
+                <button onclick="sortByTitle()">Sort By Title</button>
+                <button onclick="reset()">Reset</button>
+            </div>
+            <div id="main">No Todos</div>
+        </div>
     </body>
     <script src="index.js"></script>
 </html>
