@@ -19,7 +19,7 @@ function showTodo(item){
 };
 
 function toggleComplete(item){
-   console.log(item)
+   console.log(item.children[0])
    if (item.className === 'false'){
        item.className = 'true';
    } else {
@@ -57,7 +57,7 @@ function filterComplete(){
 
 function sortByTitle(){
     const { list } = state;
-    return list.sort((a,b) => {
+    list.sort((a,b) => {
         if (a.title[0] > b.title[0]){
             return 1;
         } else if (a.title[0] < b.title[0]){
@@ -66,6 +66,7 @@ function sortByTitle(){
             return 0;
         } 
     })
+    render();
 }
 
 function filterIncomplete(){
